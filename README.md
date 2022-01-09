@@ -76,6 +76,6 @@ Editer le fichier `.env`
 
 + Pour le lien d'abonnement et l'ajout d'une carte, il faut modifier manuellement la réponse afin de bien simuler la fonctionnalité comme venant d'un autre API
 
-+ La raison pour laquelle il faut les stocker, c'est que même si du côté client les tokens ont été supprimés, ils n'en reste pas moins valides. Donc, pour des raisons de sécurité, il faut les stocker et comparer les tokens qui sont nouvellement connecter à l'API. Voici est le lien pour effacer les "refreshToken" : 
++ La raison pour laquelle il faut stocker les refreshtoken, c'est que même si du côté client les tokens ont été supprimés, ils n'en reste pas moins valides. Donc, pour des raisons de sécurité, il faut les stocker et comparer les tokens qui sont nouvellement connecter à l'API. Voici est le lien pour effacer les "refreshToken" : 
 Methode : `delete`
 Route : `/refreshToken`
