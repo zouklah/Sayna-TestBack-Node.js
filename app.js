@@ -28,8 +28,10 @@ app.use(function (req, res, next) {
 	res.status(404)
 })
 
+var config = JSON.parse(process.env.APP_CONFIG);
+
 const url = process.env.DATABASE_URI
-mongoose.connect(url, {useNewUrlParser:true})
+mongoose.connect("mongodb://" + config.mongo.user + ":" + encodeURIComponent(config.mongo.password) + "@" + config.mongo.hostString, {useNewUrlParser:true})
 
 const db = mongoose.connection
 db.once('open', _ =>{
