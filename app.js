@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose')
 require('dotenv').config({ path : './.env' })
+const config = JSON.parse(process.env.APP_CONFIG);
 
 const app = express();
 
@@ -28,17 +29,14 @@ app.use(function (req, res, next) {
 	res.status(404)
 })
 
-var config = JSON.parse(process.env.APP_CONFIG);
-
-const url = process.env.DATABASE_URI
 mongoose.connect("mongodb://" + config.mongo.user + ":" + encodeURIComponent(config.mongo.password) + "@" + config.mongo.hostString, {useNewUrlParser:true})
 
 const db = mongoose.connection
 db.once('open', _ =>{
-	console.log("Database connected : " + url)
+	console.log("Database connected ")
 })
 db.on('error', err => {
-	console.log("connection error : " + err)
+	console.log("connection error " + err)
 })
 
 module.exports = app;
