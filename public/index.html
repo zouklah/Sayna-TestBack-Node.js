@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <title>Documentation technique de l'API</title>
+  <meta charset="utf-8">  
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <h1>Sayna-TestBack-Node.js</h1>
+    <br>
+
+    <h2>Description</h2>
+    <p>C'est un API Node.js qui permet à des utilisateurs de consulter des musiques et faire des abonnements. <br>
+    L'API utilise MongoDB comme base de données.</p>
+
+    <h2>Installation</h2>
+    <pre><span class="code">$ npm install</span></pre>
+    <br>
+
+    <h2>Lancement</h2>
+    <pre><span class="code1">$ npm start</span></pre>
+    <br>
+
+    <h2>Configuration</h2>
+    <p>Editer le fichier <strong>".env"</strong></p>
+
+    <h2>Routes</h2>
+
+    <h3>GET [/]</h3>
+    <ul>
+    <li>Affichage de la page <strong>"index.html"</strong></li>
+    </ul>
+
+    <h3>POST [/login]</h3>
+    <ul>
+    <li>Route d'authentification d'un utilisateur</li>
+    </ul>
+
+    <h3>POST [/register]</h3>
+    <ul>
+    <li>Route d'insciption d'un utilisateur</li>
+    </ul>
+
+    <h3>PUT [/subscription]</h3>
+    <ul>
+    <li>Route d'abonnement de l'utilisateur</li>
+    </ul>
+
+    <h3>PUT [/user]</h3>
+    <ul>
+    <li>Route de modification de l'utilisateur</li>
+    </ul>
+
+    <h3>DELETE [/user/off]</h3>
+    <ul>
+    <li>Route de déconnections de l'utilisateur</li>
+    </ul>
+
+    <h3>PUT [/user/cart]</h3>
+    <ul>
+    <li>Route d'ajout de carte bancaire</li>
+    </ul>
+
+    <h3>DELETE [/user]</h3>
+    <ul>
+    <li>Route de suppression du compte</li>
+    </ul>
+
+    <h3>GET [/songs]</h3>
+    <ul>
+    <li>Route de listing des sources audios</li>
+    </ul>
+
+    <h3>GET [/songs/:id]</h3>
+    <ul>
+    <li>Route de récupération d'une source audio</li>
+    </ul>
+
+</body>
+
+</html>
